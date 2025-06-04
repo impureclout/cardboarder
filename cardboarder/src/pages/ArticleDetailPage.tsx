@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { mockNewsData } from '../utils/mockData';
-import type { NewsArticle } from '../utils/mockData';
+// import type { NewsArticle } from '../utils/mockData'; // Removed unused import
 import { useAuth } from '../contexts/AuthContext';
 import { useSavedArticles } from '../hooks/useSavedArticles';
 
