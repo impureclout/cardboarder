@@ -1,20 +1,28 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+// ESM equivalent for __dirname
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   base: '/cardboarder/',
 
+  // Set Vite's root to the 'cardboarder' directory (where this config file is)
+  root: __dirname,
+
   build: {
-    // Vite will build into 'cardboarder/dist' because this config is in 'cardboarder/'
-    // and outDir is 'dist' relative to this config file.
-    outDir: 'dist',
+    // Output directly to the project root's 'docs' folder
+    outDir: path.resolve(__dirname, '../docs'),
     rollupOptions: {
       input: {
-        // This path must be relative to the CWD when `npm run build` is executed.
-        // Since CWD is project root, this should be 'cardboarder/index.html'.
-        main: 'cardboarder/index.html'
+        // Since 'root' is 'cardboarder/', 'index.html' correctly refers to 'cardboarder/index.html'
+        // The output will be 'docs/index.html'
+        main: 'index.html'
       },
     },
     emptyOutDir: true,

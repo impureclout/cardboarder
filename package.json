@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --config cardboarder/vite.config.ts",
-    "build": "vite build --config cardboarder/vite.config.ts && Remove-Item -Recurse -Force docs -ErrorAction SilentlyContinue && mkdir docs && Copy-Item -Recurse -Force cardboarder/dist/* docs/ && tsc --project cardboarder/tsconfig.app.json --noEmit",
+    "build": "vite build --config cardboarder/vite.config.ts && tsc --project cardboarder/tsconfig.app.json --noEmit",
     "lint": "eslint cardboarder/ --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview --config cardboarder/vite.config.ts"
   },
@@ -19,6 +19,7 @@
     "react-router-dom": "^7.6.1"
   },
   "devDependencies": {
+    "@types/node": "^22.15.29",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@typescript-eslint/eslint-plugin": "^7.13.0",
@@ -31,7 +32,7 @@
     "gh-pages": "^6.3.0",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.4",
-    "typescript": "~5.5.2", 
+    "typescript": "~5.5.2",
     "vite": "^5.3.1"
   }
 }
