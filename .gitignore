@@ -1,0 +1,26 @@
+# Dependencies
+/node_modules/
+/cardboarder/node_modules/
+
+# Build output
+/dist/
+/cardboarder/dist/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+*.local
+
+# IDEs and editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+.DS_Store
+Thumbs.db 
