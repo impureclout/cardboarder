@@ -10,7 +10,7 @@
     "lint": "eslint cardboarder/ --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview --config cardboarder/vite.config.ts",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d cardboarder/dist"
+    "deploy": "cd cardboarder/dist && gh-pages -d ."
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",
