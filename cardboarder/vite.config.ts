@@ -9,7 +9,7 @@ export default defineConfig({
     outDir: 'docs',
     rollupOptions: {
       input: {
-        main: 'cardboarder/index.html'
+        index: 'cardboarder/index.html'
       }
     },
     emptyOutDir: true,
