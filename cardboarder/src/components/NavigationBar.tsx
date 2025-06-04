@@ -53,7 +53,7 @@ const NavigationBar: React.FC = () => {
   return (
     <nav 
       className={`fixed w-full z-50 transition-all duration-300 ease-in-out 
-                  ${isScrolled ? 'bg-cb-purple shadow-xl' : 'bg-transparent shadow-none'}
+                  ${isScrolled ? 'bg-cb-purple shadow-xl' : 'bg-cb-purple shadow-none'}
                   ${isMenuOpen && !isScrolled ? 'bg-cb-purple shadow-xl' : ''} // Ensure bg on mobile open even if not scrolled
                   p-4`}
     >
