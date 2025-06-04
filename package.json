@@ -8,9 +8,7 @@
     "dev": "vite --config cardboarder/vite.config.ts",
     "build": "vite build --config cardboarder/vite.config.ts && tsc --project cardboarder/tsconfig.app.json --noEmit",
     "lint": "eslint cardboarder/ --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview --config cardboarder/vite.config.ts",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b gh-pages -d cardboarder/dist"
+    "preview": "vite preview --config cardboarder/vite.config.ts"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",

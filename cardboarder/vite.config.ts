@@ -6,11 +6,12 @@ export default defineConfig({
   plugins: [react()],
   base: '/cardboarder/',
   build: {
-    outDir: 'cardboarder/dist',
+    outDir: '../../docs',
     rollupOptions: {
       input: {
         main: 'cardboarder/index.html'
       }
     },
+    emptyOutDir: true,
   }
 })
