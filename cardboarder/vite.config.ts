@@ -7,15 +7,14 @@ export default defineConfig({
   base: '/cardboarder/',
 
   build: {
-    // Vite will build into 'PROJECT_ROOT/cardboarder/dist' because config is in 'cardboarder/'
-    // and input is 'cardboarder/index.html' relative to CWD.
-    // Let's explicitly set outDir to be 'dist' relative to this config file.
+    // Vite will build into 'cardboarder/dist' because this config is in 'cardboarder/'
+    // and outDir is 'dist' relative to this config file.
     outDir: 'dist',
     rollupOptions: {
       input: {
-        // This will result in `cardboarder/dist/cardboarder/index.html`
-        // which is fine, as we will move files in the package.json script.
-        main: 'index.html' // This is now relative to the vite.config.ts location
+        // This path must be relative to the CWD when `npm run build` is executed.
+        // Since CWD is project root, this should be 'cardboarder/index.html'.
+        main: 'cardboarder/index.html'
       },
     },
     emptyOutDir: true,
